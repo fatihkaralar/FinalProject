@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Abstract
+namespace Core.Entities
 {
     //If a class  implemets IEntity,ıt means that, this class is a table of the database.
     public interface IEntity
