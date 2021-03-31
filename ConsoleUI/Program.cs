@@ -28,10 +28,18 @@ namespace ConsoleUI
             int counter = 1;
             EfProductDal efProductDal = new EfProductDal();
             ProductManager productManager = new ProductManager(efProductDal);
-            foreach (var product in productManager.GetProductDetails())
+            var result = productManager.GetProductDetails();
+            
+            if (result.Success)
             {
-                Console.WriteLine(counter + "-" + product.ProductName + "/" + product.CategoryName);
-                counter++;
+                foreach (var product in result.Data)
+                {
+                    Console.WriteLine(product.ProductName+"/"+product.CategoryName);
+                }
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
             }
         }
     }
