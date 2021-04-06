@@ -1,5 +1,5 @@
-﻿using Bussiness.Abstract;
-using Bussiness.Constants;
+﻿using Business.Abstract;
+using Business.Constants;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bussiness.Concrete
+namespace Business.Concrete
 {
     public class ProductManager : IProductService
     {
